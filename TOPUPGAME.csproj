@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{568B9B1E-F3C3-4FC2-9A08-5BDEF1232628}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TOPUPGAME</RootNamespace>
+    <AssemblyName>TOPUPGAME</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlClient, Version=4.6.1.5, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Data.SqlClient.4.8.5\lib\net461\System.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controller\AkunUserGameController.cs" />
+    <Compile Include="Controller\PemesananController.cs" />
+    <Compile Include="Controller\ProdukController.cs" />
+    <Compile Include="Model\Entity\AkunUserGame.cs" />
+    <Compile Include="Model\Entity\Pemesanan.cs" />
+    <Compile Include="Model\Entity\Produk.cs" />
+    <Compile Include="Model\Repository\AkunUserGameRepository.cs" />
+    <Compile Include="Model\Repository\PemesananRepository.cs" />
+    <Compile Include="Model\Repository\ProdukRepository.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmAccountGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmAccountGame.Designer.cs">
+      <DependentUpon>FrmAccountGame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmBuatPesanan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmBuatPesanan.Designer.cs">
+      <DependentUpon>FrmBuatPesanan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmEntryAccountGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmEntryAccountGame.Designer.cs">
+      <DependentUpon>FrmEntryAccountGame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmLupaPasswordPart2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmLupaPasswordPart2.Designer.cs">
+      <DependentUpon>FrmLupaPasswordPart2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmDaftarAkun.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmDaftarAkun.Designer.cs">
+      <DependentUpon>FrmDaftarAkun.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmLupaPasswordPart1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmLupaPasswordPart1.Designer.cs">
+      <DependentUpon>FrmLupaPasswordPart1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmVerfikasiKode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmVerfikasiKode.Designer.cs">
+      <DependentUpon>FrmVerfikasiKode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\UserController.cs" />
+    <Compile Include="Model\Context\DbContext.cs" />
+    <Compile Include="Model\Entity\User.cs" />
+    <Compile Include="Model\Repository\UserRepository.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\HomeCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\HomeCustomer.Designer.cs">
+      <DependentUpon>HomeCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Profile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Profile.Designer.cs">
+      <DependentUpon>Profile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\QrisPembayaran.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\QrisPembayaran.Designer.cs">
+      <DependentUpon>QrisPembayaran.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\RiwayatPembelian.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\RiwayatPembelian.Designer.cs">
+      <DependentUpon>RiwayatPembelian.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="View\FrmAccountGame.resx">
+      <DependentUpon>FrmAccountGame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmBuatPesanan.resx">
+      <DependentUpon>FrmBuatPesanan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmEntryAccountGame.resx">
+      <DependentUpon>FrmEntryAccountGame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmLupaPasswordPart2.resx">
+      <DependentUpon>FrmLupaPasswordPart2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmDaftarAkun.resx">
+      <DependentUpon>FrmDaftarAkun.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmLupaPasswordPart1.resx">
+      <DependentUpon>FrmLupaPasswordPart1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmVerfikasiKode.resx">
+      <DependentUpon>FrmVerfikasiKode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\HomeCustomer.resx">
+      <DependentUpon>HomeCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Profile.resx">
+      <DependentUpon>Profile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\QrisPembayaran.resx">
+      <DependentUpon>QrisPembayaran.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\RiwayatPembelian.resx">
+      <DependentUpon>RiwayatPembelian.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\best-minecraft-seeds-badlands-seed.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jisoo1.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4772101.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maxresdefault.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\R.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconQris.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\826.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dana.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cbaa0388892e0a154353c2a1cb8b3fee.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cbaa0388892e0a154353c2a1cb8b3fee.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dana1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dana2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OIP.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\call-of-duty-mobile-50.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maxresdefault1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Valorant-6644-1627264566.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Valorant-6644-16272645662.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
